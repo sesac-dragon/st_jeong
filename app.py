@@ -8,6 +8,7 @@ api_key = os.environ.get('API_SECRET_KEY')
 
 st.write(f'api key = {api_key}')
 
-# if not os.environ.get('DB_HOST'):
-#     st.write('DB 접속정보가 없습니다.')
-# else:
+if not os.environ.get('DB_HOST'):
+    st.write('DB 접속정보가 없습니다.')
+else:
+    conn = pymysql.connect(host=os.environ.get())
