@@ -11,4 +11,4 @@ st.write(f'api key = {api_key}')
 if not os.environ.get('DB_HOST'):
     st.write('DB 접속정보가 없습니다.')
 else:
-    conn = pymysql.connect(host=os.environ.get())
+    conn = pymysql.connect(host=os.environ.get("DB_HOST"))
